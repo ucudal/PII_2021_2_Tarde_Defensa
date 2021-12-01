@@ -17,5 +17,12 @@ namespace Ucu.Poo.Defense
             this.Quantity = quantity;
             this.Price = price;
         }
+
+        public string AsText(){
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append($"{this.Quantity} de {this.Residue.Name} a ${this.Price}");
+
+            return stringBuilder.ToString();
+        }
     }
 }

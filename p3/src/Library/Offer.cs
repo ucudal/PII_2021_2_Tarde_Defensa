@@ -9,6 +9,16 @@ namespace Ucu.Poo.Defense
     {
         public DateTime EndDate { get; set; }
 
+        public int Total {
+            get{
+                int total = 0;
+                foreach(OfferItem offerItem in this.items){
+                    total += offerItem.SubTotal;
+                }
+                return total;
+            }
+        }
+
         public IReadOnlyCollection<OfferItem> Items
         {
             get
